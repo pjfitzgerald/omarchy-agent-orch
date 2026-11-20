@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "pjf.agent-orch",
+  "name": "Agent orchestrator",
+  "version": "1.0.0",
+  "author": "pjf",
+  "license": "MIT",
+  "description": "Bar icon for agent-orch: shows where the orchestrator agent is running (its host, or a local fallback) and toggles its drop-down popout.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Agent orchestrator",
+    "description": "Toggle the orchestrator popout; shows host / fallback state.",
+    "category": "Tools",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "refreshIntervalSec": 20
+    },
+    "schema": [
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 5,
+        "max": 600,
+        "step": 1,
+        "defaultValue": 20
+      }
+    ]
+  }
+}
